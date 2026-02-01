@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Descargas Dirección</title>
+    <title>descargas1_Direccion | Direccion</title>
 
     <style>
         body {
@@ -14,7 +14,7 @@
         }
 
         h1 {
-            padding: 25px 0;
+            padding: 20px;
         }
 
         /* REGRESAR */
@@ -30,21 +30,24 @@
         /* GRID DE DESCARGAS */
         .grid-descargas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, 200px);
-            gap: 60px;
+            grid-template-columns: repeat(1, 200px);
+            gap: 15px;
             justify-content: center;
-            margin-bottom: 40px;
+            padding-bottom: 40px;
         }
 
-        /* RECUADROS */
+        /* QUITAR SUBRAYADO A ENLACES */
+        .grid-descargas a {
+            text-decoration: none;
+        }
+
+        /* BANNER */
         .banner {
             width: 200px;
             height: 200px;
-            padding: 15px;
-
             background-color: #9b59b6;
             color: white;
-            font-size: 16px;
+            font-size: 18px;
 
             display: flex;
             flex-direction: column;
@@ -52,59 +55,34 @@
             justify-content: center;
             text-align: center;
 
-            border-radius: 18px;
+            border-radius: 20px;
             cursor: pointer;
             transition: transform 0.3s, background-color 0.3s;
-
-            overflow: hidden;
         }
 
         .banner:hover {
             background-color: #8e44ad;
-            transform: scale(1.08);
-        }
-
-        .titulo {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-
-        .subtitulo {
-            font-size: 13px;
-            line-height: 1.3;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
+            transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- REGRESAR (corregido sin acentos en archivo) -->
-    <a href="menú_Dirección.html" class="regresar">Regresar</a>
+    <!-- REGRESAR -->
+    <a href="menu_Direccion.html" class="regresar">Regresar</a>
 
-    <h1>Formatos – Dirección</h1>
+    <h1>Descargar formatos</h1>
 
     <div class="grid-descargas">
 
-        <!-- FORMATO COORDINACIÓN -->
-        <a href="ESPACIO_EN_BLANCO">
+        <!-- FORMATO INFORME COMUNITARIO -->
+        <a href="https://docs.google.com/spreadsheets/d/1jwXWwG11THqzSxobWvPCxv1vcnR8A8e0JxGkiKtjQMk/edit?usp=sharing"
+           target="_blank">
             <div class="banner">
-                <div class="titulo">(Sin formato descargable)</div>
-                <div class="subtitulo">
-                    N/A
-                </div>
+                Formato para el Informe Comunitario
             </div>
         </a>
-
-        <!-- ESPACIO PARA FUTURO FORMATO -->
-        <div class="banner" style="background-color:#ccc; color:#777; cursor:default;">
-            Próximamente
-        </div>
 
     </div>
 

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Descargas | Dirección</title>
+    <title>descargas3</title>
 
     <style>
         body {
@@ -17,7 +17,6 @@
             padding: 20px;
         }
 
-        /* REGRESAR */
         .regresar {
             position: absolute;
             top: 20px;
@@ -27,21 +26,20 @@
             text-decoration: underline;
         }
 
-        /* GRID DE DESCARGAS */
         .grid-descargas {
             display: grid;
-            grid-template-columns: repeat(1, 200px);
+            grid-template-columns: repeat(2, 200px);
             gap: 15px;
             justify-content: center;
             padding-bottom: 40px;
         }
 
-        /* QUITAR SUBRAYADO A ENLACES */
-        .grid-descargas a {
+        .link-descarga {
+            display: block;
             text-decoration: none;
+            color: inherit;
         }
 
-        /* BANNER */
         .banner {
             width: 200px;
             height: 200px;
@@ -69,18 +67,29 @@
 
 <body>
 
-    <!-- REGRESAR -->
-    <a href="menú_Dirección.html" class="regresar">Regresar</a>
+    <a href="menu_SubD.html" class="regresar">Regresar</a>
 
     <h1>Descargar formatos</h1>
 
     <div class="grid-descargas">
 
-        <!-- FORMATO INFORME COMUNITARIO -->
-        <a href="https://docs.google.com/spreadsheets/d/1jwXWwG11THqzSxobWvPCxv1vcnR8A8e0JxGkiKtjQMk/edit?usp=sharing"
-           target="_blank">
+        <a 
+            href="https://ee.kobotoolbox.org/x/PQynrSNZ"
+            class="link-descarga"
+            target="_blank"
+        >
             <div class="banner">
-                Formato para el Informe Comunitario
+                Registro de mujeres, niñas y niños
+            </div>
+        </a>
+
+        <a 
+            href="https://ee.kobotoolbox.org/x/jo0hIrrq"
+            class="link-descarga"
+            target="_blank"
+        >
+            <div class="banner">
+                Registro de servicios especializados
             </div>
         </a>
 

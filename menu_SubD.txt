@@ -97,7 +97,7 @@
 
     <a href="index.html" class="regresar">Regresar</a>
 
-    <h1>Menú Principal</h1>
+    <h1>Menú Subdirección</h1>
 
     <div class="grid-menu">
 
@@ -122,7 +122,7 @@
         </a>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
-        <a href="descargas1.html">
+        <a href="descargas3.html">
             <div class="boton">
                 <div class="titulo">Servicios Especializados</div>
                 <div class="subtitulo">
