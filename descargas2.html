@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Descargas Línea Mujer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 25px 0;
+        }
+
+        /* REGRESAR */
+        .regresar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: underline;
+        }
+
+        /* GRID DE DESCARGAS */
+        .grid-descargas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 200px);
+            gap: 60px;                 /* AQUÍ se controla qué tan juntitos */
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        /* RECUADROS */
+        .banner {
+            width: 200px;
+            height: 200px;
+            padding: 15px;
+
+            background-color: #9b59b6;
+            color: white;
+            font-size: 16px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            border-radius: 18px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+
+            overflow: hidden;
+        }
+
+        .banner:hover {
+            background-color: #8e44ad;
+            transform: scale(1.08);
+        }
+
+        .titulo {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .subtitulo {
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- REGRESAR -->
+    <a href="menu_SubD.html" class="regresar">Regresar</a>
+
+    <h1>Formatos – Línea Mujer</h1>
+
+    <div class="grid-descargas">
+
+        <!-- FORMATO LÍNEA MUJER -->
+        <a href="https://ee.kobotoolbox.org/x/nHdlCTBc" target="_blank">
+            <div class="banner">
+                <div class="titulo">Registro</div>
+                <div class="subtitulo">
+                    Atención Línea Mujer
+                </div>
+            </div>
+        </a>
+
+</body>
+</html>

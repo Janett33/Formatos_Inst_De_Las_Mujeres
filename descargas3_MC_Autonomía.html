@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>descargas3_MC_Autonomía</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        .regresar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: underline;
+        }
+
+        .grid-descargas {
+            display: grid;
+            grid-template-columns: repeat(1, 200px);
+            gap: 15px;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .link-descarga {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .banner {
+            width: 200px;
+            height: 200px;
+            background-color: #9b59b6;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .banner:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="menu_Mujeres_en_Comuindades.html" class="regresar">Regresar</a>
+
+    <h1>Descargar formatos</h1>
+
+    <div class="grid-descargas">
+
+        <a 
+            href="https://docs.google.com/spreadsheets/d/1Vqj8PWAIb6yEgCLbMXyA5yEoA6kHj3zKEoPK5TehQLY/edit?gid=0#gid=0"
+            class="link-descarga"
+            target="_blank"
+        >
+            <div class="banner">
+                Formato<br>Autonomía y Empoderamiento
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>menu_Mujeres_en_Comuindades.html</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eee;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        /* BOTÓN REGRESAR */
+        .regresar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .regresar:hover {
+            text-decoration: underline;
+        }
+
+        /* GRID */
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-items: center;
+            padding-bottom: 40px;
+        }
+
+        .boton {
+            width: 200px;
+            height: 200px;
+            padding: 15px;
+            background-color: #9b59b6;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            border-radius: 16px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+
+            overflow: hidden;
+        }
+
+        .boton:hover {
+            background-color: #8e44ad;
+            transform: scale(1.08);
+        }
+
+        .vacio {
+            background-color: #ccc;
+            cursor: default;
+        }
+
+        .vacio:hover {
+            transform: none;
+            background-color: #ccc;
+        }
+
+        .titulo {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .subtitulo {
+            font-size: 13px;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="regresar">Regresar</a>
+
+    <h1>Menú Mujeres en comunidades</h1>
+
+    <div class="grid-menu">
+
+        <!-- COMUNITARIO-->
+        <a href="descargas1_MC_Comunitario.html">
+            <div class="boton">
+                <div class="titulo">Comunitario</div>
+		<div class="subtitulo">
+                    Formato para informe
+            </div>
+            </div>
+        </a>
+	
+        <a href="descargas2_MC_PEA.html">
+	<div class="boton">
+                <div class="titulo">PEA</div>
+		<div class="subtitulo">
+                    Formato para informe
+            </div>
+            </div>
+        </a>
+
+        <a href="descargas3_MC_Autonomía.html">
+	<div class="boton">
+                <div class="titulo">Autonomía y empoderamiento</div>
+		<div class="subtitulo">
+                    Formato para informe
+            </div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

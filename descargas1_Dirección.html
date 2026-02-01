@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Descargas | Dirección</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        /* REGRESAR */
+        .regresar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: underline;
+        }
+
+        /* GRID DE DESCARGAS */
+        .grid-descargas {
+            display: grid;
+            grid-template-columns: repeat(1, 200px);
+            gap: 15px;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        /* QUITAR SUBRAYADO A ENLACES */
+        .grid-descargas a {
+            text-decoration: none;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 200px;
+            height: 200px;
+            background-color: #9b59b6;
+            color: white;
+            font-size: 18px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .banner:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- REGRESAR -->
+    <a href="menú_Dirección.html" class="regresar">Regresar</a>
+
+    <h1>Descargar formatos</h1>
+
+    <div class="grid-descargas">
+
+        <!-- FORMATO INFORME COMUNITARIO -->
+        <a href="https://docs.google.com/spreadsheets/d/1jwXWwG11THqzSxobWvPCxv1vcnR8A8e0JxGkiKtjQMk/edit?usp=sharing"
+           target="_blank">
+            <div class="banner">
+                Formato para el Informe Comunitario
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

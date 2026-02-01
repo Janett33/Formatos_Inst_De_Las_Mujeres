@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página principal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        /* CONTENEDOR GRID */
+        .grid-banners {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            justify-items: center;
+            padding-bottom: 40px;
+        }
+
+        .banner {
+            width: 200px;
+            height: 200px;
+            background-color: #9b59b6;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .banner:hover {
+            background-color: #8e44ad;
+            transform: scale(1.1);
+        }
+
+        .banner-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .banner-subtitle {
+            font-size: 14px;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Gestión de formatos para cada área o departamento</h1>
+
+    <div class="grid-banners">
+
+        <a href="menú_Dirección.html">
+            <div class="banner">
+                <div class="banner-title">Dirección</div>
+            </div>
+        </a>
+
+        <a href="menu_SubD.html">
+            <div class="banner">
+                <div class="banner-title">Subdirección de Atención a las violencias</div>
+            </div>
+        </a>
+
+        <a href="menu_PPE.html">
+            <div class="banner">
+                <div class="banner-title">Departamento de Programas y Proyectos Estratégicos</div>
+            </div>
+        </a>
+
+        <a href="menu_Mujeres_en_Comuindades.html">
+            <div class="banner">
+                <div class="banner-title">Mujeres en comunidades</div>
+                <div class="banner-subtitle">Desarrollo de las Mujeres en Comunidades
+	    </div>
+            </div>
+        </a>
+
+        <a href="menu.html">
+            <div class="banner">
+                <div class="banner-title">Departamento Administrativo</div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
