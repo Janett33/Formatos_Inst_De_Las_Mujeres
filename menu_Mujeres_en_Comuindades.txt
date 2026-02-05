@@ -104,7 +104,7 @@
         <!-- COMUNITARIO-->
         <a href="descargas1_MC_Comunitario.html">
             <div class="boton">
-                <div class="titulo">Comunitario</div>
+                <div class="titulo">Redes Comunitarias</div>
 		<div class="subtitulo">
                     Formato para informe
             </div>
