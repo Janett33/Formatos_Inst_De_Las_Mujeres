@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>descargas1_Direccion | Direccion</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 20px;
+        }
+
+        .regresar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: underline;
+        }
+
+        .grid-descargas {
+            display: grid;
+            grid-template-columns: repeat(1, 200px);
+            gap: 30px;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        /* Banner general */
+        .banner {
+            width: 200px;
+            height: 200px;
+            background-color: #9b59b6;
+            color: white;
+            font-size: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .banner:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+        }
+
+        /* CONTENEDOR MENU */
+        .menu-container {
+            position: relative;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        /* SUBMENÚ A LA DERECHA */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 220px;
+
+            width: 180px;
+
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+
+            z-index: 50;
+            padding-left: 10px;
+        }
+
+        /* Sub-banners (meses) */
+        .mes {
+            background-color: #b491d6;
+            padding: 12px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .mes:hover {
+            background-color: #9b59b6;
+            transform: scale(1.05);
+        }
+
+        a { text-decoration: none; }
+    </style>
+</head>
+
+<body>
+
+    <a href="descargas1_Direccion.html" class="regresar">Regresar</a>
+
+    <h1>Descargar formatos</h1>
+
+    <div class="grid-descargas">
+
+        <!-- INFORME MENSUAL CON SUBMENÚ -->
+        <div class="menu-container">
+            <div class="banner" id="bannerMenu">
+                Informe Mensual
+            </div>
+
+            <!-- SUBMENÚ -->
+            <div class="submenu" id="submenu">
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Enero</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Febrero</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Marzo</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Abril</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Mayo</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Junio</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Julio</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Agosto</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Septiembre</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Octubre</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Noviembre</div></a>
+                <a href="https://docs.google.com/document/d/1rzXL6xiv6VOKYfeETDV_xK0U7FzHNtJL/edit"><div class="mes">Diciembre</div></a>
+            </div>
+        </div>
+
+        <!-- INFORME ACUMULADO -->
+        <a href="https://docs.google.com/document/d/1aU1UXRL6HGfM5n1cSCpVfj3OnpnQVJZC/edit">
+            <div class="banner">Informe Acumulado</div>
+        </a>
+
+    </div>
+
+    <!-- SCRIPT PARA MOSTRAR/OCULTAR MENÚ -->
+    <script>
+        const bannerMenu = document.getElementById("bannerMenu");
+        const submenu = document.getElementById("submenu");
+
+        let menuVisible = false;
+
+        bannerMenu.addEventListener("click", (event) => {
+            event.stopPropagation(); // evita cierre inmediato
+            menuVisible = !menuVisible;
+            submenu.style.display = menuVisible ? "grid" : "none";
+        });
+
+        // Evita que clic en submenú lo cierre
+        submenu.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        // Cierre al hacer clic fuera
+        document.addEventListener("click", () => {
+            submenu.style.display = "none";
+            menuVisible = false;
+        });
+
+	// Cerrar con tecla ESC
+	document.addEventListener("keydown", (event) => {
+   	if (event.key === "Escape") {
+        submenu.style.display = "none";
+        menuVisible = false;
+    }
+});
+
+    </script>
+
+</body>
+</html>

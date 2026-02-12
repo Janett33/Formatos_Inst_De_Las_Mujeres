@@ -30,7 +30,7 @@
         /* GRID DE DESCARGAS */
         .grid-descargas {
             display: grid;
-            grid-template-columns: repeat(1, 200px);
+            grid-template-columns: repeat(2, 200px);
             gap: 15px;
             justify-content: center;
             padding-bottom: 40px;
@@ -81,6 +81,15 @@
            target="_blank">
             <div class="banner">
                 Formato para el Informe Comunitario
+            </div>
+        </a>
+
+
+	<!-- INFORME DE LA DIRECTORA -->
+        <a href="descargas2_Direccion_directora.html"
+           target="_blank">
+            <div class="banner">
+                Informe de la Directora
             </div>
         </a>
 
