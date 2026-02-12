@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>descargas1_Direccion | Direccion</title>
+    <title>descargas2_Direccion_Directora | Direccion</title>
 
     <style>
         body {
