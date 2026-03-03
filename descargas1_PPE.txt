@@ -39,47 +39,135 @@
             color: inherit;
         }
 
+        /* Banner general */
         .banner {
             width: 200px;
             height: 200px;
             background-color: #9b59b6;
             color: white;
             font-size: 18px;
+
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+
             border-radius: 20px;
-            cursor: pointer;
             transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
         }
 
         .banner:hover {
             background-color: #8e44ad;
             transform: scale(1.05);
         }
-    </style>
+    
+
+
+        /* CONTENEDOR MENU */
+        .menu-container {
+            position: relative;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        /* SUBMENÚ A LA DERECHA */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 220px;
+
+            width: 180px;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+
+            z-index: 50;
+            padding-left: 10px;
+        }
+
+  /* Sub-banners (meses) */
+        .mes {
+            background-color: #b491d6;
+            padding: 12px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .mes:hover {
+            background-color: #9b59b6;
+            transform: scale(1.05);
+        }
+
+        a { text-decoration: none; }
+
+
+</style>
 </head>
 
 <body>
 
-    <a href="menu_PPE" class="regresar">Regresar</a>
+    <a href="menu_PPE.html" class="regresar">Regresar</a>
 
     <h1>Descargar formatos</h1>
 
     <div class="grid-descargas">
 
-        <a 
-            href="https://docs.google.com/spreadsheets/d/1snxRykTs5KngQ9E9naoroOuIY1Wi1jar01ELXOQ8nHk/edit?usp=sharing"
-            class="link-descarga"
-            target="_blank"
-        >
-            <div class="banner">
-                Formato<br>PPE
+	<!-- FORMATO PARA EL INFORME DE PPE CON SUBMENÚ -->
+        <div class="menu-container">
+            <div class="banner" id="bannerMenu">
+                Formato para el Informe PPE
             </div>
-        </a>
 
+            <!-- SUBMENÚ -->
+            <div class="submenu" id="submenu">
+		<a href="https://docs.google.com/spreadsheets/d/1snxRykTs5KngQ9E9naoroOuIY1Wi1jar01ELXOQ8nHk/edit?usp=sharing"><div class="mes">Enero</div></a>
+		<a href="https://docs.google.com/spreadsheets/d/13kkBNPZLPF_tWbTxY688IuIVHFGKXLUr3z2niEe7fbQ/edit?gid=0#gid=0"><div class="mes">Febrero</div></a>
+                <a href="#"><div class="mes">Marzo</div></a>
+                <a href="#"><div class="mes">Abril</div></a>
+                <a href="#"><div class="mes">Mayo</div></a>
+                <a href="#"><div class="mes">Junio</div></a>
+                <a href="#"><div class="mes">Julio</div></a>
+                <a href="#"><div class="mes">Agosto</div></a>
+                <a href="#"><div class="mes">Septiembre</div></a>
+                <a href="#"><div class="mes">Octubre</div></a>
+                <a href="#"><div class="mes">Noviembre</div></a>
+                <a href="#"><div class="mes">Diciembre</div></a>
+            </div>
+        </div>
     </div>
+
+<!-- SCRIPT PARA MOSTRAR/OCULTAR MENÚ -->
+    <script>
+        const bannerMenu = document.getElementById("bannerMenu");
+        const submenu = document.getElementById("submenu");
+
+        let menuVisible = false;
+
+        bannerMenu.addEventListener("click", (event) => {
+            event.stopPropagation();
+            menuVisible = !menuVisible;
+            submenu.style.display = menuVisible ? "grid" : "none";
+        });
+
+        submenu.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", () => {
+            submenu.style.display = "none";
+            menuVisible = false;
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                submenu.style.display = "none";
+                menuVisible = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
