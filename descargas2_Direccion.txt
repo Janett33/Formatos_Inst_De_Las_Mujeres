@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Descargas Dirección</title>
+    <title>Registro de apoyos</title>
 
     <style>
         body {
@@ -27,6 +27,12 @@
             text-decoration: underline;
         }
 
+        /* Quitar subrayado de los enlaces */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         /* GRID DE DESCARGAS */
         .grid-descargas {
             display: grid;
@@ -40,71 +46,79 @@
         .banner {
             width: 200px;
             height: 200px;
-            padding: 15px;
-
             background-color: #9b59b6;
             color: white;
-            font-size: 16px;
+            border-radius: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
 
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-
-            border-radius: 18px;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-
-            overflow: hidden;
+            padding: 15px;
+            box-sizing: border-box;
         }
 
         .banner:hover {
             background-color: #8e44ad;
-            transform: scale(1.08);
+            transform: scale(1.05);
+        }
+
+        /* Evita el subrayado dentro del banner */
+        .banner,
+        .banner * {
+            text-decoration: none;
+            color: white;
         }
 
         .titulo {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
+            text-align: center;
         }
 
         .subtitulo {
-            font-size: 13px;
-            line-height: 1.3;
+            margin: 0;
+            padding-left: 20px;
+            text-align: left;
+            font-size: 14px;
+            color: white;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        .subtitulo li {
+            margin-bottom: 6px;
+            color: white;
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- REGRESAR (corregido sin acentos en archivo) -->
+    <!-- REGRESAR -->
     <a href="menu_Direccion.html" class="regresar">Regresar</a>
 
     <h1>Formatos – Dirección</h1>
 
     <div class="grid-descargas">
 
-        <!-- FORMATO COORDINACIÓN -->
-        <a href="ESPACIO_EN_BLANCO">
+        <!-- REGISTRO DE APOYOS -->
+        <a href="https://ee.kobotoolbox.org/x/SYdmyYQo" target="_blank">
             <div class="banner">
-                <div class="titulo">(En espera del formato)</div>
-                <div class="subtitulo">
-                    N/A
+
+                <div class="titulo">
+                    Registro de Apoyos
                 </div>
+
+                <ul class="subtitulo">
+                    <li>Apoyos entregados</li>
+                    <li>Solicitudes atendidas</li>
+                    <li>Solicitudes recibidas</li>
+                </ul>
+
             </div>
         </a>
-
-        <!-- ESPACIO PARA FUTURO FORMATO -->
-        <div class="banner" style="background-color:#ccc; color:#777; cursor:default;">
-            Próximamente
-        </div>
 
     </div>
 

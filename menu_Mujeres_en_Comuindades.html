@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>menu_Mujeres_en_Comuindades.html</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
 
     <style>
         body {
@@ -40,6 +42,7 @@
             padding-bottom: 40px;
         }
 
+        /* BOTONES */
         .boton {
             width: 200px;
             height: 200px;
@@ -56,8 +59,9 @@
             border-radius: 16px;
             cursor: pointer;
             transition: transform 0.3s, background-color 0.3s;
-
             overflow: hidden;
+            box-sizing: border-box;
+
         }
 
         .boton:hover {
@@ -76,13 +80,13 @@
         }
 
         .titulo {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             margin-bottom: 8px;
         }
 
         .subtitulo {
-            font-size: 13px;
+            font-size: 18px;
             line-height: 1.2;
         }
 
@@ -90,6 +94,37 @@
             text-decoration: none;
             color: inherit;
         }
+
+ /* BANNER CAPACITACIONES */
+        .capacitaciones {
+            grid-column: 1 / span 3;
+
+            width: calc(100% - 80px);
+            max-width: 1200px;
+            min-height: 90px;
+
+            background-color: #F594DD;
+            color: white;
+            border-radius: 16px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            box-sizing: border-box;
+            padding: 18px;
+
+            margin-top: 30px;   /* Cambia la altura de separación entre banners */
+
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .capacitaciones:hover {
+            background-color: #d43987;
+            transform: scale(1.02);
+        }
+
     </style>
 </head>
 
@@ -122,10 +157,18 @@
 
         <a href="descargas3_MC_Autonomia.html">
 	<div class="boton">
-                <div class="titulo">Autonomía y empoderamiento</div>
+            <div class="titulo">Autonomía y empoderamiento</div>
 		<div class="subtitulo">
                     Formato para informe
+           	</div>
             </div>
+        </a>
+
+ <!-- CAPACITACIONES -->
+        <a href="https://ee.kobotoolbox.org/x/V3sJzylB" class="capacitaciones" target="_blank">
+            <div class="titulo">Capacitaciones</div>
+            <div class="subtitulo">
+                Redes Comunitarias, PEA o Autonomía y Empoderamiento
             </div>
         </a>
 

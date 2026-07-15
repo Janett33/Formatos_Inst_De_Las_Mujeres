@@ -1,190 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página principal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Página principal</title>
+	<link rel="icon" type="image/png" href="logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+	*{margin:0;padding:0;box-sizing:border-box}
+	body{
+		font-family:'Poppins',sans-serif;
+		min-height:100vh;
+		overflow-x:hidden;
+		background:linear-gradient(135deg,#f8efff,#efe4ff,#edf5ff);
+		display:flex;flex-direction:column;align-items:center;
+	     }
 
-        h1 {
-            padding: 20px;
-        }
+	.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.45;z-index:-1;animation:float 12s ease-in-out infinite}
+	.b1{width:320px;height:320px;background:#b35cff;top:-80px;left:-60px}
+	.b2{width:280px;height:280px;background:#ff7cc7;right:-70px;top:120px;animation-delay:2s}
+	.b3{width:360px;height:360px;background:#7fb3ff;bottom:-120px;left:35%;animation-delay:4s}
+	@keyframes float{50%{transform:translateY(-25px) translateX(15px) scale(1.05)}}
+	
+	.glass{
+	margin:40px auto 30px;
+	width:min(900px,90%);
+	padding:28px;
+	background:rgba(255,255,255,.25);
+	backdrop-filter:blur(18px);
+	border:1px solid rgba(255,255,255,.45);
+	border-radius:28px;
+	box-shadow:0 15px 40px rgba(0,0,0,.12);
+	text-align:center;
+	      }
 
-        .grid-banners {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            justify-items: center;
-            padding-bottom: 40px;
-        }
+	h1{color:#4b2b63;font-size:2rem}
+	.glass p{margin-top:10px;color:#66507c}
+	.grid-banners{
+		width:min(1000px,92%);
+		display:grid;
+		grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+		gap:40px;
+		padding-bottom:40px;
+		}
 
-        .banner {
-            width: 200px;
-            height: 200px;
-            background-color: #9b59b6;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-            text-align: center;
-            padding: 10px;
-        }
+	.banner{
+		height:210px;
+		border-radius:24px;
+		padding:20px;
+		cursor:pointer;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		text-align:center;
+		color:#fff;
+		background:linear-gradient(135deg,#b86cf0,#9b59b6,#7d41b3);
+		box-shadow:0 12px 28px rgba(124,65,179,.25);
+		transition:.35s;
+		}
 
-        .banner:hover {
-            background-color: #8e44ad;
-            transform: scale(1.1);
-        }
+		.banner:hover{
+			transform:translateY(-8px) scale(1.03);
+			box-shadow:0 22px 40px rgba(124,65,179,.35);
+			}
 
-        .banner-title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .banner-subtitle {
-            font-size: 14px;
-            margin-top: 8px;
-            opacity: 0.9;
-        }
-
-        /* MODAL (queda sin uso por ahora) */
-        #modalAcceso {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-contenido {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            width: 300px;
-        }
-
-        input {
-            width: 90%;
-            padding: 8px;
-            margin-top: 10px;
-        }
-
-        button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            cursor: pointer;
-        }
-
-        .error {
-            color: red;
-            margin-top: 10px;
-        }
-    </style>
+		.banner-title{font-weight:700;font-size:1.2rem}
+		.banner-subtitle{margin-top:10px;font-size:.88rem;opacity:.95}
+		#modalAcceso{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);justify-content:center;align-items:center}
+		.modal-contenido{background:#fff;padding:25px;border-radius:20px;width:320px}
+		input{width:100%;padding:10px;margin:12px 0}
+		button{padding:10px 16px;border:none;border-radius:8px;background:#9b59b6;color:#fff;cursor:pointer}
+		button:hover{background:#8746aa}
+		.error{color:#c00;margin-top:10px}
+</style>
 </head>
 
+
 <body>
+	<div class="blob b1">
+	</div>
+	<div class="blob b2">
+	</div>
+	<div class="blob b3">
+	</div>
 
-<h1>Gestión de formatos por área o departamento</h1>
+	<div class="glass">
+	<h1>Gestión de formatos por área o departamento</h1>
+	<p>Instituto de las Mujeres de Mérida</p>
+	</div>
 
-<div class="grid-banners">
+	<div class="grid-banners">
+	<div class="banner" onclick="pedirAcceso('direccion')"><div class="banner-title">Dirección</div></div>
+	<div class="banner" onclick="pedirAcceso('violencias')"><div class="banner-title">Subdirección de Atención a las Violencias</div></div>
+	<div class="banner" onclick="pedirAcceso('ppe')"><div class="banner-title">Departamento de Programas y Proyectos Estratégicos</div></div>
+	<div class="banner" onclick="pedirAcceso('comunidades')"><div class="banner-title">Mujeres en Comunidades</div><div class="banner-subtitle">Desarrollo de las Mujeres en Comunidades</div></div>
+	</div>
 
-    <div class="banner" onclick="pedirAcceso('direccion')">
-        <div class="banner-title">Dirección</div>
-    </div>
+	<div id="modalAcceso">
+	<div class="modal-contenido">
+	<h3>Acceso restringido</h3>
+	<input id="numTrabajador" placeholder="Número de trabajador">
+	<button onclick="validar()">Ingresar</button>
+	<button onclick="cerrarModal()">Cancelar</button>
+	<div id="msgError" class="error"></div>
+	</div>
+	</div>
 
-    <div class="banner" onclick="pedirAcceso('violencias')">
-        <div class="banner-title">Subdirección de Atención a las Violencias</div>
-    </div>
-
-    <div class="banner" onclick="pedirAcceso('ppe')">
-        <div class="banner-title">Departamento de Programas y Proyectos Estratégicos</div>
-    </div>
-
-    <div class="banner" onclick="pedirAcceso('comunidades')">
-        <div class="banner-title">Mujeres en Comunidades</div>
-        <div class="banner-subtitle">
-            Desarrollo de las Mujeres en Comunidades
-        </div>
-    </div>
-
-</div>
-
-<!-- MODAL (queda preparado para después) -->
-<div id="modalAcceso">
-    <div class="modal-contenido">
-        <h3>Acceso restringido</h3>
-        <input type="text" id="numTrabajador" placeholder="Número de trabajador">
-        <br>
-        <button onclick="validar()">Ingresar</button>
-        <button onclick="cerrarModal()">Cancelar</button>
-        <div id="msgError" class="error"></div>
-    </div>
-</div>
 
 <script>
-
-var areaSeleccionada = "";
-
-var permisos = {
-    direccion: ["1001","1002"],
-    violencias: ["2001","2002"],
-    ppe: ["3001","3002"],
-    comunidades: ["4001","4002"]
-};
-
-var links = {
-    direccion: "menu_Direccion.html",
-    violencias: "menu_SubD.html",
-    ppe: "menu_PPE.html",
-    comunidades: "menu_Mujeres_en_Comuindades.html"
-};
-
-// MIENTRAS SE VE LO DEL SERVIDOR: redirigir directo sin validación
-function pedirAcceso(area) {
-    areaSeleccionada = area;
-    window.location.href = links[areaSeleccionada];
-}
-
-/*
-// CUANDO SE VEA LO DEL SERVIDOR, usar esta versión:
-
-function pedirAcceso(area) {
-    areaSeleccionada = area;
-    document.getElementById("modalAcceso").style.display = "flex";
-    document.getElementById("msgError").innerText = "";
-    document.getElementById("numTrabajador").value = "";
-}
-*/
-
-function validar() {
-    var num = document.getElementById("numTrabajador").value.trim();
-
-    if(permisos[areaSeleccionada].includes(num)) {
-        window.location.href = links[areaSeleccionada];
-    } else {
-        document.getElementById("msgError").innerText = "Acceso denegado";
-    }
-}
-
-function cerrarModal() {
-    document.getElementById("modalAcceso").style.display = "none";
-}
-
-</script>
-
-</body>
-</html>
+	var areaSeleccionada="";
+	var permisos={direccion:["1001","1002"],violencias:["2001","2002"],ppe:["3001","3002"],comunidades:["4001","4002"]};
+	var links={direccion:"menu_Direccion.html",violencias:"menu_SubD.html",ppe:"menu_PPE.html",comunidades:"menu_Mujeres_en_Comuindades.html"};
+	function pedirAcceso(a){areaSeleccionada=a;window.location.href=links[a];}
+	function validar(){
+		let n=document.getElementById("numTrabajador").value.trim();
+		if(permisos[areaSeleccionada].includes(n))window.location.href=links[areaSeleccionada];
+		else document.getElementById("msgError").innerText="Acceso denegado";
+			}
+	function cerrarModal(){document.getElementById("modalAcceso").style.display="none";}
+	</script>
+	</body>
+	</html>

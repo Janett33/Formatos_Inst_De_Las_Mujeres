@@ -63,14 +63,15 @@
             margin: 0 auto;
         }
 
-        /* SUBMENÚ A LA DERECHA */
+        /* SUBMENÚ */
         .submenu {
             display: none;
             position: absolute;
             top: 0;
             left: 220px;
 
-            width: 180px;
+            width: 430px;
+            display: none;
             grid-template-columns: repeat(4, 100px);
             gap: 10px;
 
@@ -78,7 +79,7 @@
             padding-left: 10px;
         }
 
-        /* Sub-banners (meses) */
+        /* Meses */
         .mes {
             background-color: #b491d6;
             padding: 12px;
@@ -94,7 +95,26 @@
             transform: scale(1.05);
         }
 
-        a { text-decoration: none; }
+        /* Banner Capacitaciones */
+        .capacitaciones {
+            grid-column: 1 / span 4;
+            background-color: #F594DD;
+            color: white;
+            padding: 12px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 0px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .capacitaciones:hover {
+            background-color: #d43987;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -106,27 +126,47 @@
 
     <div class="grid-descargas">
 
-        <!-- FORMATO INFORME COMUNICACIÓN CON SUBMENÚ -->
+        <!-- FORMATO INFORME COMUNICACIÓN -->
         <div class="menu-container">
+
             <div class="banner" id="bannerMenu">
                 Formato para el Informe Comunicación
             </div>
 
             <!-- SUBMENÚ -->
             <div class="submenu" id="submenu">
+
                 <a href="https://docs.google.com/spreadsheets/d/1wfdOITcrrNMugb3MwasCE8rneBEGlc7qDd0jCtVOB9Q/edit?gid=0#gid=0"><div class="mes">Enero</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1AhYqEl1nnckoZ8K7W8YwAYKkIgqYzckMRp_kLcPOuZ8/edit?gid=0#gid=0"><div class="mes">Febrero</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/140i6mttHU2LscO41BQCJCoKYPxOMa3hjKWvOXBQueoM/edit?gid=0#gid=0"><div class="mes">Marzo</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1ufMlKOmbD-IkJw6pNX-Ug1rmHIQcKVxScG6YvcP58xE/edit?gid=0#gid=0"><div class="mes">Abril</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1y9Inkq7keBghBRCyKTOzRlVPvXu9_24qY2teZKuIPLA/edit?gid=0#gid=0"><div class="mes">Mayo</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1thgcQIgyd_dGZAOQFh66g02KF9mnYfoa-Ozr4vqR2Rw/edit?gid=0#gid=0"><div class="mes">Junio</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/13QmqwGJJU8u4HaBSuy1exJhUzAFM-11demNvpKbfSHY/edit?gid=0#gid=0"><div class="mes">Julio</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/19vRQ8thADltYxHljgyEZ7Xj59dJ1oIl_b0A9jMo28V8/edit?gid=0#gid=0"><div class="mes">Agosto</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1Nc-mRZLUfGSyEAwxzaerBgubmzSdHvqlsIoTyQNABGQ/edit?gid=0#gid=0"><div class="mes">Septiembre</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1SZBm_JQceGWG5ZnUGBoimme1904GqhpfaHSVsroWOP4/edit?gid=0#gid=0"><div class="mes">Octubre</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1V5YEe_IClVYaD4Tt4ctOtyfEpBLNo1iMWMyS2Rglfg0/edit?gid=0#gid=0"><div class="mes">Noviembre</div></a>
+
                 <a href="https://docs.google.com/spreadsheets/d/1_s2maNcdbqQyhoBsRRn9ODPxSKObW_5PilduJbBitJ8/edit?gid=0#gid=0"><div class="mes">Diciembre</div></a>
+
+                <!-- BANNER CAPACITACIONES-->
+                <a href="https://ee.kobotoolbox.org/x/V3sJzylB" class="capacitaciones">
+                    Capacitaciones
+                </a>
+
             </div>
+
         </div>
 
         <!-- INFORME DE LA DIRECTORA -->
@@ -138,7 +178,6 @@
 
     </div>
 
-    <!-- SCRIPT PARA MOSTRAR/OCULTAR MENÚ -->
     <script>
         const bannerMenu = document.getElementById("bannerMenu");
         const submenu = document.getElementById("submenu");

@@ -93,7 +93,7 @@
         <!-- COORDINACIÓN JURÍDICA -->
         <a href="descargas2_Direccion.html">
             <div class="boton">
-                Coordinación Jurídica
+                Administración
             </div>
         </a>
 

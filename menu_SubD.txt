@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>menu_SubD</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
 
     <style>
         body {
@@ -40,6 +42,7 @@
             padding-bottom: 40px;
         }
 
+        /* BOTONES */
         .boton {
             width: 200px;
             height: 200px;
@@ -56,23 +59,13 @@
             border-radius: 16px;
             cursor: pointer;
             transition: transform 0.3s, background-color 0.3s;
-
             overflow: hidden;
+            box-sizing: border-box;
         }
 
         .boton:hover {
             background-color: #8e44ad;
             transform: scale(1.08);
-        }
-
-        .vacio {
-            background-color: #ccc;
-            cursor: default;
-        }
-
-        .vacio:hover {
-            transform: none;
-            background-color: #ccc;
         }
 
         .titulo {
@@ -90,6 +83,37 @@
             text-decoration: none;
             color: inherit;
         }
+
+        /* BANNER CAPACITACIONES */
+        .capacitaciones {
+            grid-column: 1 / span 3;
+
+            width: calc(100% - 80px);
+            max-width: 1200px;
+            min-height: 90px;
+
+            background-color: #F594DD;
+            color: white;
+            border-radius: 16px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            box-sizing: border-box;
+            padding: 18px;
+
+            margin-top: 30px;   /* Cambia la altura de separación entre banners */
+
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .capacitaciones:hover {
+            background-color: #d43987;
+            transform: scale(1.02);
+        }
+
     </style>
 </head>
 
@@ -112,7 +136,7 @@
         </a>
 
         <!-- LÍNEA MUJER -->
-	<a href="descargas2.html">
+        <a href="descargas2.html">
             <div class="boton">
                 <div class="titulo">Línea Mujer</div>
                 <div class="subtitulo">
@@ -131,7 +155,13 @@
             </div>
         </a>
 
-        
+        <!-- CAPACITACIONES -->
+        <a href="https://ee.kobotoolbox.org/x/V3sJzylB" class="capacitaciones" target="_blank">
+            <div class="titulo">Capacitaciones</div>
+            <div class="subtitulo">
+                CAREM, Línea Mujer o SEAV
+            </div>
+        </a>
 
     </div>
 
